@@ -1,5 +1,5 @@
 import socket
-
+#firewall rules
 def handle_connection(client_socket):
     
     allowed_ips = ['127.0.0.1'] 
@@ -14,7 +14,7 @@ def handle_connection(client_socket):
     message = 'Thank you for connecting'
     client_socket.send(message.encode())
     client_socket.close()
-
+#server code
 def main():
     s = socket.socket()
     port = 3456
@@ -38,6 +38,6 @@ def main():
             break
 
     s.close()
-
+#run main
 if __name__ == "__main__":
     main()
